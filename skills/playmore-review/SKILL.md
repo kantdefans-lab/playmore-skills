@@ -105,50 +105,44 @@ Example:
 
 ## Step 3 — Generate overall synthesis
 
-After reviewing all papers, generate a comprehensive global synthesis comment in 3-4 paragraphs with progressive depth:
+After reviewing all papers, generate a focused academic synthesis in 3 paragraphs grounded in background knowledge:
 
 ```
 你是一个学术研究分析师。
 
-基于以下所有论文的编辑评论，生成一个丰富的整体睿评思考。
-
-论文列表：
-{all_papers_with_comments}
+基于背景知识文件和这些论文的编辑评论，生成一个学术性的整体分析。
 
 背景知识：
 {background_knowledge_summary}
 
-请用3-4段进行层层递进的分析：
+论文列表：
+{all_papers_with_comments}
 
-第1段：现状与趋势
-- 这些论文反映了该领域的哪些重要趋势？
-- 与背景知识中的研究前沿相比，有什么新的进展？
-- 技术方向有什么演进？
+请用3段进行学术讨论（不涉及方向和展望）：
 
-第2段：创新与问题
-- 这些论文中最重要的创新是什么？
-- 这些创新如何推动了领域发展？
-- 同时存在哪些共同的问题和挑战？
-- 这些问题与背景知识中的关键争议有什么关联？
+第1段：与核心文献的关系
+- 这些论文如何验证、推进或挑战背景知识中的关键论文（Smith et al. 2023, Johnson et al. 2022等）？
+- 具体的性能对比是什么？
+- 是否存在方法论上的本质突破？
 
-第3段：关联与应用
-- 这些论文之间有什么演进关系或补充关系？
-- 这些工作对实际应用有什么启示？
-- 实际应用面临哪些障碍？
+第2段：对理论框架的贡献
+- 这些论文如何验证或推进背景知识中的理论框架？
+- 是否提出了新的理论假设？
+- 在评估标准（准确率、鲁棒性、实时性、可解释性等）上的表现如何？
 
-第4段（可选）：方向与展望
-- 基于这些论文，该领域应该如何发展？
-- 有哪些重要的研究空白需要填补？
-- 有哪些有前景的研究方向？
+第3段：在关键争议中的立场
+- 这些论文在背景知识中的关键争议（如"AI能否替代心理医生"、"隐私与性能的权衡"）中采取了什么立场？
+- 是否提供了新的证据或视角？
+- 存在哪些未解决的根本问题？
 
 要求：
-- 层层递进，逻辑清晰
+- 具体引用背景知识中的论文和框架
+- 使用具体的数据和指标
+- 学术性的论证，避免泛泛而谈
 - 每段3-4句话
-- 形成一个完整的领域认知
-- 避免重复，每段有新的深度
 ```
 
-Output: **整体睿评思考** (3-4 paragraphs, progressive depth)
+Output: **整体锐评思考** (3 paragraphs, academic focus)
 
 ## Step 4 — Classify and output
 
@@ -169,7 +163,7 @@ After reviewing all papers, display in this format:
 ## 简要摘要
 本次搜索"{search_keywords}"共找到{n}篇论文，主要集中在{main_directions}...
 
-## 整体睿评思考
+## 整体锐评思考
 {global_synthesis_comment}
 
 ## States of Mind 地图
