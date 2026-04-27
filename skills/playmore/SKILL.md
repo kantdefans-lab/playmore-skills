@@ -19,7 +19,7 @@ $ARGUMENTS contains either:
 Invoke sub-skills in order:
 1. `/playmore-fetch $ARGUMENTS` — search across all sources
 2. `/playmore-score` — score and rank results
-3. `/playmore-review` — AI review and classification
+3. `/playmore-review` — AI review with background knowledge (builds background knowledge file if needed)
 4. `/playmore-notes` — generate and save notes
 
 ### If $ARGUMENTS is `schedule` → task management mode
@@ -34,3 +34,9 @@ If any task's date range includes today, run the full pipeline with that task's 
 ## Notes storage root
 
 `C:\Users\kantd\Desktop\playmore\`
+
+## Background knowledge storage
+
+`C:\Users\kantd\Desktop\playmore\background_knowledge\`
+
+Background knowledge files are built once per concept and reused for all subsequent paper reviews in that concept. Format: `{concept}_background.md`

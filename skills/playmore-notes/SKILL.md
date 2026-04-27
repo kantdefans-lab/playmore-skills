@@ -55,29 +55,17 @@ score: {total score}
 date_added: {today YYYY-MM-DD}
 ---
 
-## AI 点评
+## 编辑评论
 
-{review comment from playmore-review}
-
-## 核心贡献
-
-{3 bullet points summarizing main contributions}
-
-## 研究方法
-
-{describe the methodology, model architecture, or approach used}
-
-## 主要结论
-
-{key findings and results}
-
-## 局限性
-
-{limitations acknowledged by the paper or apparent from the abstract}
-
-## 创新性
-
-{how this paper advances beyond prior work — compare to related papers in the same concept folder if any exist}
+{full editorial comment from playmore-review, including:
+- 总体评价
+- 创新性和意义
+- 技术质量
+- 与相关工作的关系
+- 应用前景和影响
+- 主要问题
+- 建议
+- 决定}
 
 ## 摘要
 
