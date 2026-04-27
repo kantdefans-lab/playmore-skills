@@ -141,15 +141,9 @@ qclaw mcp add chrome-devtools -- npx -y chrome-devtools-mcp@latest
 
 ---
 
-#### 第五步：做一个一键启动 Chrome 的快捷方式
+#### 第五步：保证Chrome开着，以便playmore抓取谷歌学术与知网的数据
 
-谷歌学术和知网需要 Chrome 开着才能搜。让 Qclaw 帮你在桌面做一个双击就能用的快捷方式，以后每次用之前双击一下就行：
-
-```
-请帮我在桌面创建一个快捷方式，双击后自动以调试模式启动 Chrome（端口 9222）
-```
-
-Qclaw 会在桌面生成一个文件（Windows 是 `.bat`，macOS 是 `.command`）。以后每次用 playmore 之前双击它，Chrome 会自动打开，保持开着就好。
+谷歌学术和知网需要 Chrome 开着才能搜。每次用 playmore 的时候记得保持Chrome开着。
 
 ---
 
