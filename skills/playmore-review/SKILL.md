@@ -104,31 +104,29 @@ Based on the editorial review, assign classification:
 - **📖 可读** — Major Revision (interesting but needs work)
 - **💡 了解** — Reject or background context (limited contribution)
 
-Output format:
-```
-{emoji} {title}
-{editorial comment (2-3 paragraphs)}
-决定：{Accept / Minor Revision / Major Revision / Reject}
-```
-
 ## Step 4 — Display summary
 
-After reviewing all papers, print:
+After reviewing all papers, group by classification and display:
 
 ```
 共 {n} 篇 | ⭐ {x} 必读  📖 {y} 可读  💡 {z} 了解
 
 ⭐ 必读
 1. {title}
-   {1-2 sentence summary}
+   {editorial comment (2-3 paragraphs)}
+   
+2. {title}
+   {editorial comment (2-3 paragraphs)}
 
 📖 可读
-...
+1. {title}
+   {editorial comment (2-3 paragraphs)}
 
 💡 了解
-...
+1. {title}
+   {editorial comment (2-3 paragraphs)}
 ```
 
 ## Step 5 — Pass to playmore-notes
 
-Pass the reviewed list (with editorial comments) to `/playmore-notes`.
+Pass the reviewed list (with editorial comments and classifications) to `/playmore-notes`.
