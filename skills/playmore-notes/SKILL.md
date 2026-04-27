@@ -57,7 +57,7 @@ date_added: {today YYYY-MM-DD}
 
 ## 编辑评论
 
-{full editorial comment from playmore-review (2-3 paragraphs)}
+{FULL editorial comment from playmore-review (2-3 paragraphs)}
 
 ### 决定
 {Accept / Minor Revision / Major Revision / Reject}
@@ -66,6 +66,8 @@ date_added: {today YYYY-MM-DD}
 
 {full abstract}
 ```
+
+Note: The full editorial comment is stored here. The simplified version (2-3 sentences) is used in the daily report display.
 
 ## Step 4 — Save the file
 

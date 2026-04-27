@@ -37,7 +37,10 @@ Save to `C:\Users\kantd\Desktop\playmore\background_knowledge\{concept}_backgrou
 
 ## Step 2 — Generate journal editor review
 
-For each paper, use this prompt structure:
+For each paper, generate TWO versions of editorial comment:
+
+### Version A: Full editorial comment (for notes)
+Use this prompt structure:
 
 ```
 You are a journal editor with 15+ years of experience in {concept}.
@@ -54,10 +57,6 @@ Citations: {cited_by}
 
 Abstract:
 {abstract}
-
-{method_summary if available}
-
-{key_results if available}
 
 【Review Instructions】
 Generate a concise, precise editorial comment in 2-3 paragraphs.
@@ -96,7 +95,39 @@ Output format:
 {Accept / Minor Revision / Major Revision / Reject}
 ```
 
-## Step 3 — Classify and output
+### Version B: Simplified editorial comment (for daily report)
+Extract 2-3 key sentences from Version A that capture the essence.
+
+Example:
+- Full: "这篇论文提出了一个新的多模态融合框架用于实时情绪识别，在准确率和推理速度上都超过了现有方法。相比Johnson et al. (2022)的多模态方法（准确率85%），这项工作通过引入生理信号的动态加权机制，将准确率提升到91%，同时保持了实时性（<50ms）。这是该领域的一个重要进展。方法论上，论文采用了Transformer架构处理时间序列，符合该领域的最佳实践。实验设计严谨，使用了1000+患者的数据集（包含跨文化验证），结果清晰地支持了结论。主要不足是缺少对生理信号数据隐私保护的讨论，这在医疗应用中至关重要。"
+
+- Simplified: "提出新的多模态融合框架，准确率从85%提升到91%。方法论严谨，但缺少隐私保护讨论。"
+
+## Step 3 — Generate overall synthesis
+
+After reviewing all papers, generate a global synthesis comment:
+
+```
+你是一个学术研究分析师。
+
+基于以下所有论文的编辑评论，生成一个整体的睿评思考。
+
+论文列表：
+{all_papers_with_comments}
+
+请从全局角度分析：
+1. 这些论文反映了该领域的哪些重要趋势？
+2. 有哪些新兴的研究方向？
+3. 存在哪些共同的问题或挑战？
+4. 这些论文之间有什么关联或演进关系？
+
+输出格式：
+3-5段的综合分析，每段2-3句话。
+```
+
+Output: **整体睿评思考** (3-5 paragraphs)
+
+## Step 4 — Classify and output
 
 Based on the editorial review, assign classification:
 
@@ -104,43 +135,46 @@ Based on the editorial review, assign classification:
 - **📖 可读** — Major Revision (interesting but needs work)
 - **💡 了解** — Reject or background context (limited contribution)
 
-## Step 4 — Display summary
+## Step 5 — Display summary (States of Mind Map)
 
-After reviewing all papers, group by classification and display:
+After reviewing all papers, display in this format:
 
 ```
-共 {n} 篇 | ⭐ {x} 必读  📖 {y} 可读  💡 {z} 了解
+## 关键词
+{keywords from all papers}
 
-⭐ 必读
-1. {title}
-   作者：{authors}
-   期刊：{journal} | 分区：{journal_tier} | 发布：{year}
-   概念：{concept}
-   链接：{landing_url}
-   
-   {editorial comment (2-3 paragraphs)}
-   
-2. {title}
-   作者：{authors}
-   期刊：{journal} | 分区：{journal_tier} | 发布：{year}
-   概念：{concept}
-   链接：{landing_url}
-   
-   {editorial comment (2-3 paragraphs)}
+## 简要摘要
+本次搜索"{search_keywords}"共找到{n}篇论文，主要集中在{main_directions}...
 
-📖 可读
-1. {title}
-   作者：{authors}
-   期刊：{journal} | 分区：{journal_tier} | 发布：{year}
-   概念：{concept}
-   链接：{landing_url}
-   
-   {editorial comment (2-3 paragraphs)}
+## 整体睿评思考
+{global_synthesis_comment}
 
-💡 了解
+## States of Mind 地图
+
+### ⭐ 必读 ({count}篇)
+1. {title} ({authors}, {year})
+   - 核心贡献：{core_contribution}
+   - 编辑评论：{simplified_comment_2-3_sentences}
+   
+2. {title} ({authors}, {year})
+   - 核心贡献：{core_contribution}
+   - 编辑评论：{simplified_comment_2-3_sentences}
+
+### 📖 可读 ({count}篇)
+1. {title} ({authors}, {year})
+   - 核心贡献：{core_contribution}
+   - 编辑评论：{simplified_comment_2-3_sentences}
+
+### 💡 了解 ({count}篇)
 ...
 ```
 
-## Step 5 — Pass to playmore-notes
+## Step 6 — Pass to playmore-notes
 
-Pass the reviewed list (with editorial comments and classifications) to `/playmore-notes`.
+Pass the reviewed list with:
+- Full editorial comments (for notes)
+- Simplified editorial comments (for display)
+- Classifications
+- Global synthesis
+
+to `/playmore-notes`.
