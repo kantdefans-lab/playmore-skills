@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/sources-Google%20Scholar%20%7C%20CNKI%20%7C%20OpenAlex%20%7C%20Semantic%20Scholar-orange" alt="Sources">
 </p>
 
-<p align="center"><b>外面阳光真好，出去玩吧。</b></p>
+<p align="center"><b>外面阳光真好，多出去玩。</b></p>
 <p align="center">首个面向社科研究生的 AI 论文检索分析系统</p>
 
 <p align="center">
@@ -19,8 +19,11 @@
 
 ## 最新动态
 
-- **2026-04** 🎉 playmore-skills 正式发布，支持谷歌学术、知网、OpenAlex、Semantic Scholar 四源搜索
-- **2026-04** 支持 Qclaw / Claude Code / Codex 三平台
+- **2026-04-27** 🧠 上线研究者画像系统（`profile.md`）：每次搜索后自动更新关键词权重、阅读偏好、概念图谱，越用越懂你
+- **2026-04-27** ⚡ 打分系统升级：关键词权重现在从研究者画像动态读取，核心研究方向的论文得分更高
+- **2026-04-27** 🎯 review 个性化：AI 点评现在结合你的研究背景，从你的视角评价论文，而不是泛泛而谈
+- **2026-04-25** 🔍 关键词扩展：搜索时自动用画像里的高权重词扩展查询，找到更多相关文献
+- **2026-04-24** 🎉 playmore-skills 正式发布，支持谷歌学术、知网、OpenAlex、Semantic Scholar 四源搜索，兼容 Qclaw / Claude Code / Codex 三平台
 
 ## 路线图
 
@@ -29,7 +32,6 @@
 - [x] 概念分层笔记存储
 - [x] 定时任务管理
 - [x] 研究者画像：自动记录搜索历史和阅读偏好，生成 `profile.md`，每次交互后更新
-- [ ] 研究者画像：自动记录你的搜索历史和阅读偏好，生成 `profile.md`，每次交互后更新，越用越懂你在研究什么
 - [ ] 引用链追踪：找到一篇好文章后，自动往上追它引用了谁、往下追谁引用了它
 - [ ] 研究空白识别：分析一批文献后，AI 指出哪些角度还没人做过
 - [ ] 多项目隔离：同时跟多个研究方向，笔记和任务互不干扰
