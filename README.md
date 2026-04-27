@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/sources-Google%20Scholar%20%7C%20CNKI%20%7C%20OpenAlex%20%7C%20Semantic%20Scholar-orange" alt="Sources">
 </p>
 
-<p align="center"><b>外面阳光真好，多出去玩。</b></p>
+<p align="center"><b>外面阳光真好，出去玩吧。</b></p>
 <p align="center">首个面向社科研究生的 AI 论文检索分析系统</p>
 
 <p align="center">
