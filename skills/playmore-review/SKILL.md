@@ -60,45 +60,40 @@ Abstract:
 {key_results if available}
 
 【Review Instructions】
-Generate a professional, precise editorial comment. 
+Generate a concise, precise editorial comment in 2-3 paragraphs.
 
-The review should:
-1. Quickly position the paper in the field (vs. key papers in background knowledge)
-2. Precisely identify innovations and limitations (based on evaluation standards)
-3. Give clear recommendation (Accept / Minor Revision / Major Revision / Reject)
+Paragraph 1: Position the paper in the field
+- What's the core contribution?
+- How does it compare to key papers in background knowledge?
+- Is it innovative or incremental?
+
+Paragraph 2: Assess technical quality and limitations
+- Are the methods sound?
+- Are the experiments convincing?
+- What are the main weaknesses?
+
+Paragraph 3 (optional): Recommendation
+- Accept / Minor Revision / Major Revision / Reject
+- Why?
 
 Style:
-- Flowing, not fragmented (avoid excessive point-breaking)
-- Precise, not verbose (each point has concrete support)
-- Authoritative, not arbitrary (grounded in background knowledge and data)
+- Flowing, natural prose (not bullet points)
+- Precise and concrete (not vague)
+- Authoritative (grounded in background knowledge)
+- No excessive detail (2-3 sentences per paragraph max)
 
 Output format:
 
 ## 编辑评论
 
-### 总体评价
-[1-2 sentences]
+{paragraph 1}
 
-### 创新性和意义
-[2-3 sentences]
+{paragraph 2}
 
-### 技术质量
-[2-3 sentences]
-
-### 与相关工作的关系
-[2-3 sentences]
-
-### 应用前景和影响
-[1-2 sentences]
-
-### 主要问题
-[2-3 key issues, 1-2 sentences each]
-
-### 建议
-[1-2 sentences]
+{paragraph 3 if needed}
 
 ### 决定
-[Accept / Minor Revision / Major Revision / Reject]
+{Accept / Minor Revision / Major Revision / Reject}
 ```
 
 ## Step 3 — Classify and output
@@ -112,7 +107,8 @@ Based on the editorial review, assign classification:
 Output format:
 ```
 {emoji} {title}
-编辑评论：{editorial comment}
+{editorial comment (2-3 paragraphs)}
+决定：{Accept / Minor Revision / Major Revision / Reject}
 ```
 
 ## Step 4 — Display summary
@@ -123,8 +119,8 @@ After reviewing all papers, print:
 共 {n} 篇 | ⭐ {x} 必读  📖 {y} 可读  💡 {z} 了解
 
 ⭐ 必读
-1. {title} — {decision}
-   {1-sentence summary}
+1. {title}
+   {1-2 sentence summary}
 
 📖 可读
 ...

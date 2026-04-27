@@ -57,15 +57,10 @@ date_added: {today YYYY-MM-DD}
 
 ## 编辑评论
 
-{full editorial comment from playmore-review, including:
-- 总体评价
-- 创新性和意义
-- 技术质量
-- 与相关工作的关系
-- 应用前景和影响
-- 主要问题
-- 建议
-- 决定}
+{full editorial comment from playmore-review (2-3 paragraphs)}
+
+### 决定
+{Accept / Minor Revision / Major Revision / Reject}
 
 ## 摘要
 
