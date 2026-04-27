@@ -113,18 +113,32 @@ After reviewing all papers, group by classification and display:
 
 ⭐ 必读
 1. {title}
+   作者：{authors}
+   期刊：{journal} | 分区：{journal_tier} | 发布：{year}
+   概念：{concept}
+   链接：{landing_url}
+   
    {editorial comment (2-3 paragraphs)}
    
 2. {title}
+   作者：{authors}
+   期刊：{journal} | 分区：{journal_tier} | 发布：{year}
+   概念：{concept}
+   链接：{landing_url}
+   
    {editorial comment (2-3 paragraphs)}
 
 📖 可读
 1. {title}
+   作者：{authors}
+   期刊：{journal} | 分区：{journal_tier} | 发布：{year}
+   概念：{concept}
+   链接：{landing_url}
+   
    {editorial comment (2-3 paragraphs)}
 
 💡 了解
-1. {title}
-   {editorial comment (2-3 paragraphs)}
+...
 ```
 
 ## Step 5 — Pass to playmore-notes
