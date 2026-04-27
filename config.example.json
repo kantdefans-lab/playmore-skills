@@ -1,6 +1,5 @@
 {
-  "keywords": ["AI mental health", "LLM therapy", "deep learning emotion"],
-  "negative_keywords": ["medical imaging", "weather forecast", "climate model"],
+  "storage_root": "~/Desktop/playmore",
   "min_score": 2,
   "top_n": 30
 }

@@ -1,12 +1,12 @@
 ---
 name: playmore-schedule
 description: Manage scheduled paper search tasks for playmore. Add, list, edit, or delete tasks with date ranges and keywords.
-argument-hint: "[add|list|edit|delete] ..."
+argument-hint: "[add|list|edit|delete|run] ..."
 ---
 
 # Playmore Schedule
 
-Manage scheduled search tasks stored in `C:\Users\kantd\Desktop\playmore\schedule.json`.
+Manage scheduled search tasks stored in `~/Desktop/playmore/schedule.json`.
 
 ## Schedule file format
 
@@ -39,13 +39,13 @@ Generate a new unique id (`task_NNN`), append to schedule.json, confirm to user.
 Read schedule.json and display:
 
 ```
-Scheduled tasks:
+定时任务列表：
 
-[task_001] ✅ active
-  Keywords: AI mental health, LLM therapy
-  Period: 2026-04-01 → 2026-04-30
+[task_001] ✅ 进行中
+  关键词：AI mental health, LLM therapy
+  时间段：2026-04-01 → 2026-04-30
 
-[task_002] ⏸ inactive
+[task_002] ⏸ 已暂停
   ...
 ```
 
@@ -67,7 +67,7 @@ Read schedule.json. For each active task where today falls within `date_from`–
 - Run `/playmore {task.keywords joined by space}`
 - Report which task triggered
 
-If no tasks match today, say: "No scheduled tasks for today. Use `/playmore-schedule add` to create one."
+If no tasks match today, say: "今天没有定时任务。直接输入关键词开始搜索，或用 `/playmore-schedule add` 添加定时任务。"
 
 ## If schedule.json does not exist
 
